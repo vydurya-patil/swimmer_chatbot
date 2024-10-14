@@ -1,15 +1,14 @@
 import nltk
 from nltk.tokenize import word_tokenize
 
-# Download necessary NLTK data files (if not already downloaded)
+
 nltk.download('punkt')
 
-# Simple chatbot logic
 def chatbot_response(user_input):
     # Tokenize the user input
     tokens = word_tokenize(user_input.lower())
     
-    # Define responses based on keywords
+
     if "castle swimmer" in tokens or "about" in tokens:
         return "Castle Swimmer is about a young swimmer who embarks on a journey filled with mystery and adventure in a fantastical underwater world."
     elif "main characters" in tokens or "characters" in tokens:
@@ -19,7 +18,6 @@ def chatbot_response(user_input):
     else:
         return "I'm sorry, I don't have information on that. Can you ask something else?"
 
-# Chat loop
 def chat():
     print("Welcome to the Castle Swimmer Chatbot! Ask me anything about 'Castle Swimmer'. (type 'Done' to exit)")
     while True:
